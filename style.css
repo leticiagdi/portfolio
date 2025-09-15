@@ -1,0 +1,471 @@
+/*
+ * Este é o container principal que centraliza todo o conteúdo da página
+ * e adiciona padding para responsividade.
+ */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Estilos Globais e do Corpo da Página --- */
+body {
+    background-image: url('images/background.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Barra de Navegação --- */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 100;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #60D1CA;
+}
+
+.navbar .menu-right {
+    margin-left: auto;
+}
+
+/* --- Seção de Abertura (Hero) --- */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.hero-container {
+    max-width: 600px;
+    padding: 20px;
+}
+
+.hero-text-left {
+    text-align: left;
+}
+
+.hero-text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-container h3 {
+    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 5px;
+}
+
+.hero-container h5 {
+    font-size: 25px;
+    padding: 3px;
+    line-height: 1.2;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero-container h5 b {
+    font-size: 26px;
+    color: #60D1CA;
+}
+
+.hero-container p {
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-container button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.hero-container button:hover {
+    background-color: #9370DB;
+    border-color: #9370DB;
+    color: white;
+}
+
+/* --- Seção de Interesses e Habilidades --- */
+.skills-section {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.skills-section h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.skills-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background-color: #090909;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 40px 20px;
+    width: 280px;
+    box-shadow: 0 0 20px 5px rgba(188, 54, 206, 0.2);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.skill-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.skill-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-card ul li {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.skills-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    padding: 0 100px;
+}
+
+.skills-list {
+    text-align: left;
+    margin: 20px;
+}
+
+.skills-list.align-right {
+    text-align: right;
+}
+
+.skills-list h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.skills-list p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* --- Seção de Projetos --- */
+.projects-section {
+    padding: 80px 0;
+}
+
+.projects-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.project-item.project-right {
+    flex-direction: row;
+}
+
+.project-item.project-left {
+    flex-direction: row-reverse;
+}
+
+.project-details {
+    width: 50%;
+    padding: 20px;
+}
+
+.project-details h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.project-details p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.project-details .skills-used {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #ccc;
+    font-weight: bold;
+}
+
+.project-image {
+    width: 50%;
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* --- Outros Projetos --- */
+.other-projects-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.other-projects-section h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.other-projects-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.other-projects-separator .dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid #60D1CA;
+}
+
+.other-projects-separator .line {
+    width: 150px;
+    height: 2px;
+    background-color: #60D1CA;
+    border: none;
+    margin: 0 10px;
+}
+
+.other-projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.other-project-item {
+    width: 300px;
+    text-align: left;
+}
+
+.other-project-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.other-project-item p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* --- Seção de Contato --- */
+.contact-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    text-align: left;
+    max-width: 400px;
+}
+
+.contact-info h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contact-info p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 30px;
+    margin-right: 20px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #60D1CA;
+}
+
+.contact-form {
+    background: #090909;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 20px 5px rgba(188, 54, 206, 0.2);
+    width: 350px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #60D1CA;
+    background-color: transparent;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box; /* Garante que o padding não adicione largura extra */
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: #9370DB;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* O botão também deve ter largura total */
+}
+
+.contact-form button:hover {
+    background-color: #7957b6;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    color: #ccc;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
